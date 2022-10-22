@@ -6,13 +6,22 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "dev-android": "node 'C:\\Users\\evergreen\\AppData\\Roaming\\npm\\node_modules\\binstorm\\dist/index.js' re-style && react-native run-android",
+    "dev-ios": "node 'C:\\Users\\evergreen\\AppData\\Roaming\\npm\\node_modules\\binstorm\\dist/index.js' re-style && react-native run-ios"
   },
   "dependencies": {
+    "add": "^2.0.6",
+    "deprecated-react-native-prop-types": "^2.2.0",
     "expo": "~46.0.8",
     "expo-status-bar": "~1.4.0",
+    "or": "^0.2.0",
+    "patch-package": "^6.4.7",
     "react": "18.0.0",
-    "react-native": "0.69.4"
+    "react-native": "0.69.4",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-tailwindcss": "^1.1.11",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
