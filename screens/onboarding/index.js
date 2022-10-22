@@ -10,33 +10,36 @@ import {
   SafeAreaViewBase,
   SafeAreaView,
 } from "react-native";
-// 
-// import 
+import {
+  borderRadius,
+  colors,
+  fontWeights,
+  margin,
+  padding,
+  textSizes,
+} from "../../theme/config";
+import Button from "../../components/Buttons";
 const ENTRIES1 = [
   {
-    title: "Beautiful and dramatic Antelope Canyon",
-    subtitle: "Lorem ipsum dolor sit amet et nuncat mergitur",
-    illustration: "https://i.imgur.com/UYiroysl.jpg",
+    title: "Algorithm",
+    subtitle:
+      "Users going through a vetting process to ensure you never match with bots.",
+    illustration:
+      "https://res.cloudinary.com/evergreenx/image/upload/v1666403512/girl2_c8dfmp.png",
   },
   {
-    title: "Earlier this morning, NYC",
-    subtitle: "Lorem ipsum dolor sit amet",
-    illustration: "https://i.imgur.com/UPrs1EWl.jpg",
+    subtitle:
+      "We match you with people that have a large array of similar interests.",
+    title: "Matches",
+    illustration:
+      "https://res.cloudinary.com/evergreenx/image/upload/v1666403511/girl2_1_dc3bc0.png",
   },
   {
-    title: "White Pocket Sunset",
-    subtitle: "Lorem ipsum dolor sit amet et nuncat ",
-    illustration: "https://i.imgur.com/MABUbpDl.jpg",
-  },
-  {
-    title: "Acrocorinth, Greece",
-    subtitle: "Lorem ipsum dolor sit amet et nuncat mergitur",
-    illustration: "https://i.imgur.com/KZsmUi2l.jpg",
-  },
-  {
-    title: "The lone tree, majestic landscape of New Zealand",
-    subtitle: "Lorem ipsum dolor sit amet",
-    illustration: "https://i.imgur.com/2nCt3Sbl.jpg",
+    title: "Premium",
+    subtitle:
+      "Sign up today and enjoy the first month of premium benefits on us. ",
+    illustration:
+      "https://res.cloudinary.com/evergreenx/image/upload/v1666403510/girl2_2_mjdhdp.png",
   },
 ];
 const { width: screenWidth } = Dimensions.get("window");
@@ -66,16 +69,16 @@ const MyCarousel = (props) => {
         <Text style={styles.title} numberOfLines={2}>
           {item.title}
         </Text>
+        <Text style={styles.subtitle} numberOfLines={2}>
+          {item.subtitle}
+        </Text>
       </View>
     );
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <TouchableOpacity onPress={goForward}>
-          <Text>go to next slide</Text>
-        </TouchableOpacity>
         <Carousel
           ref={carouselRef}
           sliderWidth={screenWidth}
@@ -86,6 +89,22 @@ const MyCarousel = (props) => {
           hasParallaxImages={true}
         />
       </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          text="Create an account"
+          onPress={goForward}
+          type="filled"
+          bordered={true}
+          size="large"
+        />
+      </View>
+
+      <View style={styles.signintext}>
+        <Text>
+          Already have an account?{" "}
+          <Text style={styles.signinlink}>Sign In </Text>
+        </Text>
+      </View>
     </SafeAreaView>
   );
 };
@@ -95,19 +114,53 @@ export default MyCarousel;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.white,
+    height: "100%",
+    margin: "auto",
+    width: "100%",
+    padding: 22,
   },
   item: {
-    width: screenWidth /2.2,
-    height: screenWidth - 60,
+    width: "100%",
+    height: "80%",
   },
   imageContainer: {
     flex: 1,
     marginBottom: Platform.select({ ios: 0, android: 1 }), // Prevent a random Android rendering issue
-    backgroundColor: "white",
-    borderRadius: 8,
+    backgroundColor: colors.white,
+    borderRadius: borderRadius.lg,
   },
   image: {
     ...StyleSheet.absoluteFillObject,
-    resizeMode: "cover",
+    resizeMode: "contain",
+  },
+
+  title: {
+    fontSize: textSizes["2xl"],
+    fontWeight: fontWeights.bold,
+    color: colors["brand-red"],
+    textAlign: "center",
+    marginTop: margin[10],
+  },
+
+  subtitle: {
+    fontSize: textSizes["base"],
+    fontWeight: fontWeights.normal,
+    textAlign: "center",
+    margin: margin["5"],
+    color: colors["brand-text"],
+  },
+  signintext: {
+    marginTop: margin["5"],
+    textAlign: "center",
+    color: colors["black"],
+    fontSize: textSizes.sm,
+    fontWeights: fontWeights.normal,
+  },
+
+  signinlink: {
+    color: colors["brand-red"],
   },
 });

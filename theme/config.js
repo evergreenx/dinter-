@@ -2,7 +2,8 @@
 
 let colors = {
   transparent: "transparent",
-  "brand-red": "#E94057;",
+  "brand-red": "#E94057",
+  "brand-text": "#323755",
 
   black: "#22292f",
   "grey-darkest": "#3d4852",
@@ -143,7 +144,9 @@ module.exports = {
     sm: 2,
     default: 4,
     lg: 8,
+    xl: 15,
     full: 300,
+    
   },
   width: {
     px: 1,
