@@ -6,6 +6,7 @@ let colors = {
   "brand-text": "#323755",
 
   black: "#22292f",
+  "text-black": '#000000',
   "grey-darkest": "#3d4852",
   "grey-darker": "#606f7b",
   "grey-dark": "#8795a1",

@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Carousel, { ParallaxImage } from "react-native-snap-carousel";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   View,
   Text,
@@ -44,12 +45,13 @@ const ENTRIES1 = [
 ];
 const { width: screenWidth } = Dimensions.get("window");
 
-const MyCarousel = (props) => {
+const MyCarousel = ({ navigation }) => {
   const [entries, setEntries] = useState([]);
   const carouselRef = useRef(null);
 
   const goForward = () => {
-    carouselRef.current.snapToNext();
+    // carouselRef.current.snapToNext();
+    navigation.navigate("signup");
   };
 
   useEffect(() => {

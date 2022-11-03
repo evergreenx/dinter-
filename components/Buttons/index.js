@@ -21,7 +21,7 @@ const Button = ({
   const small = width / 2;
   const btnSize = size === "large" ? large : small;
   const btnBgColor = type === "filled" ? colors["brand-red"] : "transparent";
-  const btnTextColor = type === "filled" ? "#ffffff" : "#6371c2";
+  const btnTextColor = type === "filled" ? "#ffffff" : colors["brand-red"];
   const btnBorderRadius = bordered ? borderRadius["xl"] : 5;
 
   const containerCommonStyle = {
@@ -40,7 +40,7 @@ const Button = ({
   };
 
   const border = type === "outlined" && {
-    borderColor: "#e7e7e7",
+    borderColor: "#F3F3F3",
     borderWidth: 2,
   };
 
