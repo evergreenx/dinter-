@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Carousel, { ParallaxImage } from "react-native-snap-carousel";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import StatusHeader  from "../../components/StatusHeader";
 import {
   View,
   Text,
@@ -61,6 +62,7 @@ const MyCarousel = ({ navigation }) => {
   const renderItem = ({ item, index }, parallaxProps) => {
     return (
       <View style={styles.item}>
+        <StatusHeader />
         <ParallaxImage
           source={{ uri: item.illustration }}
           containerStyle={styles.imageContainer}

@@ -17,7 +17,7 @@ const Button = ({
   bordered = false,
   size = "large",
 }) => {
-  const large = width / 1.3;
+  const large = width / 1.1;
   const small = width / 2;
   const btnSize = size === "large" ? large : small;
   const btnBgColor = type === "filled" ? colors["brand-red"] : "transparent";

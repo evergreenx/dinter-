@@ -10,7 +10,11 @@ import {
 import LogoSvg from "../../assets/logo.svg";
 import Button from "../../components/Buttons";
 
-const Signup = ({ props }) => {
+const Signup = ({ navigation }) => {
+  const goForward = () => {
+  navigation.navigate("number");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
@@ -23,7 +27,7 @@ const Signup = ({ props }) => {
       <View style={styles.signinButtons}>
         <Button
           text="Continue with email"
-          onPress={() => props.navigation.navigate("signup")}
+          onPress={() => navigation.navigate("signup")}
           bordered // this is a prop
         />
       </View>
@@ -31,7 +35,7 @@ const Signup = ({ props }) => {
       <View style={styles.signinButtons}>
         <Button
           text="Use phone number"
-          onPress={() => props.navigation.navigate("signup")}
+          onPress={() => goForward()}
           bordered // this is a prop
           type={"outlined"} // this is a prop
         />
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
     padding: 22,
   },
   item: {
-    width: "1 00%",
+    width: "100%",
     height: "80%",
   },
   imageContainer: {

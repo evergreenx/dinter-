@@ -1,9 +1,12 @@
 "use strict";
 
+
+
 let colors = {
   transparent: "transparent",
   "brand-red": "#E94057",
   "brand-text": "#323755",
+  "brand-text-light": "hsla(0, 0%, 0%, 0.7)",
 
   black: "#22292f",
   "text-black": '#000000',
@@ -89,6 +92,9 @@ let colors = {
   "pink-lightest": "#ffebef",
 };
 
+
+
+
 module.exports = {
   colors: colors,
   backgroundColors: colors,
@@ -101,6 +107,7 @@ module.exports = {
     xl: 20,
     "2xl": 24,
     "3xl": 30,
+    "3.5xl": 34,
     "4xl": 36,
     "5xl": 48,
   },
@@ -393,5 +400,8 @@ module.exports = {
       prefix: "flex",
       propertyName: "flex",
     },
+  
+  
+
   },
 };
