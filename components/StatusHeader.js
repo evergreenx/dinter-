@@ -14,7 +14,7 @@ const StatusHeader = ({ navigation }) => {
 
 <StatusBar
 
-animated={true}   style="inverted" />
+animated={true}   style="auto" />
 
 </>
     )

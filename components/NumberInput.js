@@ -8,7 +8,7 @@ import {
   Text,
 } from "react-native";
 import PhoneInput from "react-native-phone-number-input";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import { colors, borderRadius } from "../theme/config";
 
 const NumeberInput = () => {
   const [value, setValue] = useState("");
@@ -25,7 +25,7 @@ const NumeberInput = () => {
             ref={phoneInput}
             defaultValue={value}
             defaultCode="NG"
-            layout="second"
+            layout="first"
             onChangeText={(text) => {
               setValue(text);
             }}
@@ -33,8 +33,14 @@ const NumeberInput = () => {
               setFormattedValue(text);
             }}
             withDarkTheme
+          
             // withShadow
             autoFocus
+            containerStyle = {{backgroundColor: 'white' , 
+          
+          
+          }}
+            textContainerStyle = {{backgroundColor: 'white'}}
           />
         </SafeAreaView>
       </View>
@@ -47,10 +53,15 @@ export default NumeberInput;
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
-    backgroundColor: Colors.white,
+    backgroundColor: colors.white,
     paddingVertical: 20,
   },
   wrapper: {
-    // flex: 1,
+    borderColor: colors['phone-input-border'],
+    borderWidth: 1,
+    borderRadius: borderRadius["xl"],
+    paddingHorizontal: 10,
+
+
   },
 });

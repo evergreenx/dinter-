@@ -1,15 +1,14 @@
 "use strict";
 
-
-
 let colors = {
   transparent: "transparent",
   "brand-red": "#E94057",
   "brand-text": "#323755",
   "brand-text-light": "hsla(0, 0%, 0%, 0.7)",
+  "phone-input-border": "#E8E6EA",
 
   black: "#22292f",
-  "text-black": '#000000',
+  "text-black": "#000000",
   "grey-darkest": "#3d4852",
   "grey-darker": "#606f7b",
   "grey-dark": "#8795a1",
@@ -92,9 +91,6 @@ let colors = {
   "pink-lightest": "#ffebef",
 };
 
-
-
-
 module.exports = {
   colors: colors,
   backgroundColors: colors,
@@ -154,7 +150,6 @@ module.exports = {
     lg: 8,
     xl: 15,
     full: 300,
-    
   },
   width: {
     px: 1,
@@ -248,6 +243,7 @@ module.exports = {
     6: 24,
     8: 32,
     10: 40,
+    auto: "auto",
   },
   margin: {
     px: 1,
@@ -260,6 +256,7 @@ module.exports = {
     6: 24,
     8: 32,
     10: 40,
+    auto: "auto",
   },
   zIndex: {
     0: 0,
@@ -400,8 +397,5 @@ module.exports = {
       prefix: "flex",
       propertyName: "flex",
     },
-  
-  
-
   },
 };

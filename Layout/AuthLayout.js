@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors["white"],
     // height: "100%",
     justifyContent: "center",
+    flexDirection: "column",
 
 
     // marginTop: 30,

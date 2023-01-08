@@ -22,29 +22,12 @@ import { AuthLayout } from "../../Layout/AuthLayout";
 import BackArrow from "../../assets/back.svg";
 import { style } from "deprecated-react-native-prop-types/DeprecatedTextPropTypes";
 
-const CustomHeader = ({ navigation }) => {
-  const handleGoBack = () => {
-    navigation.goBack();
-  };
-
-  return (
-    <TouchableOpacity
-      style={styles.backArrowContainer}
-      onPress={() => handleGoBack()}
-    >
-      <BackArrow style={styles.backArrowContainer} />
-    </TouchableOpacity>
-  );
-};
-
 export default function Number({ navigation }) {
   return (
     // <SafeAreaView style={styles.container}>
     <>
       <SafeAreaView style={styles.container}>
         <StatusHeader />
-
-        <CustomHeader navigation={navigation} />
 
         <AuthLayout>
           <View style={styles.numbercontainer}>
@@ -57,10 +40,10 @@ export default function Number({ navigation }) {
 
             <NumeberInput />
 
-            <View>
+            <View style={styles.buttonContainer}>
               <Button
                 text="Continue"
-                onPress={() => navigation.navigate("signup")}
+                onPress={() => navigation.navigate("otp")}
                 bordered // this is a prop
               />
             </View>
@@ -76,19 +59,13 @@ const styles = StyleSheet.create({
     flex: 1,
 
     backgroundColor: colors["white"],
-    // height: "100%",
-    // justifyContent: "flex-start",
 
-    // marginTop: 30,
 
     width: "100%",
     padding: 20,
-    // marginTop: 30,
   },
   numbercontainer: {
     flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center",
     padding: 20,
     marginTop: 60,
   },
@@ -106,13 +83,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: "left",
   },
-
-  backArrowContainer: {
-    // width: 100,
-    // height: 10,
-    padding: 10,
-    // borderColor: colors["brand-primary"],
-    // borderWidth: 1,
-    // borderRadius: borderRadius["lg"],
-  },
+  buttonContainer :{
+    marginTop: 50,
+  }
 });
