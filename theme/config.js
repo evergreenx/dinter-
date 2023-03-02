@@ -7,6 +7,8 @@ let colors = {
   "brand-text-light": "hsla(0, 0%, 0%, 0.7)",
   "phone-input-border": "#E8E6EA",
 
+  phoneInputBorder: "#E8E6EA",
+
   black: "#22292f",
   "text-black": "#000000",
   "grey-darkest": "#3d4852",

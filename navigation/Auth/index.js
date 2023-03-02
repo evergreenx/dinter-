@@ -8,6 +8,7 @@ import Number from "../../screens/Auth/Number";
 import Onboarding from "../../screens/Onboarding/index";
 import OtpInput from "../../screens/Auth/OTP";
 import LogoSvg from "../../assets/logo.svg";
+import ProfileUpdate from "../../screens/Auth/ProfileUpdate";
 
 // import { MyHeader } from "../../components/Header.js/index";
 
@@ -17,7 +18,7 @@ const Index = () => {
     <Stack.Navigator
  
     >
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Onboarding"
         component={Onboarding}
         options={{ headerShown: false }}
@@ -31,8 +32,8 @@ const Index = () => {
         name="signin"
         component={Signin}
         options={{ headerShown: false }}
-      />
-      <Stack.Screen
+      /> */}
+      {/* <Stack.Screen
         name="number"
         component={Number}
         options={{
@@ -47,11 +48,28 @@ const Index = () => {
 
 
         }}
-      />
+      /> */}
 
-<Stack.Screen
+{/* <Stack.Screen
         name="otp"
         component={OtpInput}
+        options={{
+          headerShown: true,
+          headerTitle: "",
+          headerShadowVisible: false,
+          animation : 'fade',
+          headerBackTitleVisible: false,
+
+          headerTintColor: '#E94057',
+
+
+
+        }}
+      /> */}
+
+<Stack.Screen
+        name="profileupdate"
+        component={ProfileUpdate}
         options={{
           headerShown: true,
           headerTitle: "",
